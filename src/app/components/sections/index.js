@@ -1,0 +1,6 @@
+export {default as Header} from './Header/Header.jsx'
+export {default as Footer} from './Footer/Footer.jsx'
+export {default as AboutUs} from './AboutUs/AboutUs.jsx'
+export {default as Pricing} from './Pricing/Pricing.jsx'
+export {default as Contact} from './Contact/Contact.jsx'
+export {default as Login} from './Login/Login.jsx'

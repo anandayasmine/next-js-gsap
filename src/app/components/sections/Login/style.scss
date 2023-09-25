@@ -1,0 +1,54 @@
+.section-login {
+  display: grid;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  .content {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    @include max($breakpoint-sm){
+      zoom: 95%;
+    }
+
+    .MuiCard-root {
+      display: grid;
+      padding: 2rem 2rem 3rem;
+      @include mobile-padding;
+
+    }
+
+    .MuiCardContent-root {
+      @include grid-gap;
+      position: relative;
+
+      @include mobile-padding;
+
+    }
+
+    .MuiCardHeader-action {
+      position: absolute;
+      right: 0;
+      top: 0;
+      @include mobile-padding;
+
+    }
+
+    .MuiCardActions-root {
+      padding: 0rem 2rem;
+      box-sizing: border-box;
+      @include mobile-padding;
+
+
+    }
+
+    .MuiLink-root {
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+
+
+}

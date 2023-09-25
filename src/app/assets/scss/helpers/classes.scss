@@ -1,0 +1,46 @@
+.decor-image {
+  position: absolute;
+  z-index: 0;
+
+
+  &.left-top {
+    left: -5vw;
+    top: -10vh;
+  }
+
+  &.right-bottom {
+    right: -10vw;
+    bottom: -10vh;
+  }
+
+}
+
+.red {
+  background-color: coral;
+}
+
+.orange {
+  background-color: orange;
+}
+
+
+b.light {
+  font-weight: 600;
+}
+
+.marbot {
+  margin-bottom: .5rem;
+}
+
+.color-primary {
+  color: $color-primary-lighter;
+}
+
+.color-secondary {
+  color: $color-secondary;
+}
+@include max($breakpoint-hg) {
+  .decor-image {
+    display: none;
+  }
+}

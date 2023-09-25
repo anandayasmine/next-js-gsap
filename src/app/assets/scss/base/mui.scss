@@ -1,0 +1,57 @@
+.MuiButton-root {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: $font-primary;
+  border-radius: 0.6rem;
+
+  &.huge{
+    padding: 0.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+.MuiPaper-root {
+  border-radius: 2rem;
+}
+
+.MuiCardContent-root {
+  padding: 2rem;
+  cursor: context-menu;
+}
+
+.MuiSvgIcon-root {
+  color: $color-primary;
+}
+
+.MuiChip-root {
+  font-family: $font-primary;
+  font-weight: 700;
+
+  &.thick {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    display: grid;
+    width: fit-content;
+    margin-left: auto;
+  }
+}
+
+.MuiTypography-root {
+  font-family: $font-primary;
+}
+
+.MuiCardActions-root {
+  width: 100%;
+  display: grid;
+  padding: 1rem 0rem 0.5rem;
+  font-size: 1rem;
+}
+
+.MuiLink-root{
+  text-decoration: unset;
+  color: inherit;
+  transition: ease 1s;
+  cursor: pointer;
+ 
+}

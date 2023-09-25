@@ -1,0 +1,90 @@
+@mixin grid-gap($gap: 1rem) {
+  display: grid;
+  grid-gap: $gap;
+}
+
+@mixin scroll-custom($theme: 'hide') {
+  @if $theme==hide {
+
+    /* width */
+    &::-webkit-scrollbar {
+      $size: 0rem;
+      width: $size;
+      height: $size;
+      border-radius: 5rem;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      border-radius: 5rem;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 5rem;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: transparent;
+    }
+
+  }
+
+  @else if $theme=='primary' {
+
+    /* width */
+    &::-webkit-scrollbar {
+      $size: .5rem;
+      width: $size;
+      height: $size;
+      border-radius: 5rem;
+      padding: .5rem;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: $color-background;
+      border-radius: 5rem;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $color-secondary;
+      border-radius: 5rem;
+    }
+    
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: $color-secondary-transparent;
+
+    }
+  }
+
+}
+
+@mixin min($breakpoints) {
+  @media only screen and (min-width: $breakpoints) {
+    @content;
+  }
+}
+
+@mixin max($breakpoints) {
+  @media only screen and (max-width: calc(#{$breakpoints} - 1px)) {
+    @content;
+  }
+}
+
+@mixin minmax($min-breakpoints, $max-breakpoints) {
+  @media only screen and (min-width: $min-breakpoints) and (max-width: $max-breakpoints) {
+    @content;
+  }
+}
+
+@mixin mobile-padding{
+  @include max($breakpoint-sm){
+    padding: 1.5rem 0.7rem;
+  }
+}

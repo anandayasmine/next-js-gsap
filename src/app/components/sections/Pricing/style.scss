@@ -1,0 +1,46 @@
+.section-pricing {
+  background-color: $color-background;
+  display: grid;
+
+  .container {
+    height: 100%;
+    display: grid;
+    align-items: center;
+
+    align-content: center;
+    justify-items: center;
+
+    gap: 5rem;
+
+    .block {
+      &-content {
+        @include grid-gap;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        width: 100%;
+        cursor: context-menu;
+
+        .card {
+          &>div{
+            padding-bottom: 2.3rem;
+          }
+          &.dark-mode {
+            background-color: $color-dark-purple;
+            color: white;
+
+            .MuiChip-root{
+              background: $color-secondary;
+            }
+
+            svg {
+              filter: brightness(1.5);
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+ 
+
+}

@@ -1,0 +1,51 @@
+.section-about-us {
+  background-color: $color-background;
+
+  .MuiContainer-root {
+    display: grid;
+    align-content: space-evenly;
+    grid-template-rows: repeat(2, 1fr);
+    height: 100%;
+    align-items: center;
+
+
+    @include max($breakpoint-hg){
+      justify-content: center;
+      justify-items: center;
+      *{
+        text-align: center !important;
+
+      }
+    }
+
+  }
+
+  .block {
+    &-title {
+
+      .MuiTypography-root {
+        text-align: right;
+      }
+
+    }
+
+    &-description {
+      display: grid;
+      height: 100%;
+      align-content: start;
+      justify-items: center;
+      width: 50%;
+
+      img {
+        height: fit-content;
+        width: 100%;
+      }
+    }
+  }
+
+  .decor-image {
+    @include key-wiggle(400s);
+    scale: 6;
+  }
+
+}

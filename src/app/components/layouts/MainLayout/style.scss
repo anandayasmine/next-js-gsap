@@ -1,0 +1,15 @@
+.main-layout{
+
+  >*{
+    &:hover{
+      &:not(button):not(a):not(.MuiCard-root):not(.block-menu)
+      {
+        cursor: url("../../../assets/images/mouse-cursor-small.png"), auto;
+  
+      }
+    }
+
+  }
+
+
+}

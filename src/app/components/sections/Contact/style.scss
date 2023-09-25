@@ -1,0 +1,43 @@
+.section-contact {
+  background-color: $color-dark-purple;
+  color: white;
+  cursor: context-menu;
+
+  .MuiContainer-root {
+    display: grid;
+    align-content: space-evenly;
+    height: 100%;
+    align-items: center;
+
+    justify-content: center;
+    padding-right: 35%;
+  }
+
+ 
+
+  .block {
+    &-title {}
+
+    &-description {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      height: 100%;
+
+      img {
+        height: 10vh;
+      }
+    }
+  }
+
+  .decor-image {
+    @include key-wiggle(400s);
+    scale: 6;
+  }
+  a{
+    &:hover{
+      scale: 1.05;
+    }
+  }
+
+
+}

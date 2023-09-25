@@ -1,0 +1,44 @@
+:root{
+  color: $color-black;
+  font-family: $font-primary;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: $color-primary-transparent;
+  @include scroll-custom('primary');
+
+  // cursor: url('https://res.cloudinary.com/dvkugaw3b/image/upload/v1641562028/cursor_ad12rf.png'), auto;
+}
+
+body {
+  margin: unset;
+
+  &>div {
+    height: 100%;
+
+    &>div {
+      height: 100%;
+
+    }
+  }
+}
+
+@include min($breakpoint-md) {
+  :root {
+    font-size: 100%;
+  }
+}
+
+@include minmax($breakpoint-sm, $breakpoint-md) {
+  :root {
+    font-size: 80%;
+  }
+}
+
+@include max($breakpoint-sm) {
+  :root {
+    font-size: 70%;
+  }
+}
